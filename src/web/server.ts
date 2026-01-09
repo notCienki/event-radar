@@ -16,7 +16,7 @@ server.get('/events', async () => {
 
 const start = async () => {
   try {
-    console.log("🌍 WEB: Uruchamiam serwer na porcie 3000...");
+    console.log("WEB: Uruchamiam serwer na porcie 3000...");
     await server.listen({ port: 3000 });
   } catch (err) {
     server.log.error(err);

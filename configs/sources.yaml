@@ -1,7 +1,81 @@
-sources:
-  - id: "example-rss"
-    name: "Przykładowy RSS"
-    type: "rss"
-    url: "https://example.com/feed.xml"
+sources: 
+  - id: "crossweb_wroclaw"
+    name: "Crossweb (Wrocław)"
+    type: "html"
+    url: "https://crossweb.pl/wydarzenia/wroclaw/"
     city: "wroclaw"
     enabled: true
+    priority: "very_high"
+    
+  - id: "meetup_wroclaw_tech"
+    name: "Meetup.com (Tech & Startup)"
+    type: "html"
+    url: "https://www.meetup.com/find/?location=pl--Wroclaw&source=EVENTS&keywords=technology"
+    city: "wroclaw"
+    enabled: true
+    priority: "very_high"
+
+  - id: "evenea_biznes"
+    name: "Evenea (Biznes & Startup)"
+    type: "html"
+    url: "https://evenea.pl/pl/katalog-wydarzen?q[place.city][in][]=wrocław&q[tagCategoryId][in][]=59&f[duration.end][key]=anytime"
+    city: "wroclaw"
+    enabled: true
+    priority: "high"
+
+  - id: "concordia_design"
+    name: "Concordia Design Wrocław"
+    type: "html"
+    url: "https://www.concordiadesign.pl/kalendarz/?product_city=wroclaw"
+    city: "wroclaw"
+    enabled: true
+    priority: "medium"
+
+  - id: "concordia_design_blog"
+    name: "Concordia Design Wrocław"
+    type: "html"
+    url: "https://www.concordiadesign.pl/blog/"
+    city: "wroclaw"
+    enabled: true
+    priority: "medium"
+
+  - id: "women_in_tech_wroclaw"
+    name: "Women in Tech Wrocław"
+    type: "html"
+    url: "https://www.womentech.net/women-in-tech-events"
+    city: "wroclaw"
+    enabled: true
+    priority: "medium"
+
+  - id: "wolves_summit"
+    name: "Wolves Summit"
+    type: "html"
+    url: "https://wolvessummit.com"
+    city: "wroclaw"
+    enabled: true
+    priority: "very_high"
+
+  - id: "pwr_calendar"
+    name: "Politechnika Wrocławska"
+    type: "html"
+    url: "https://pwr.edu.pl/uczelnia/przed-nami"
+    city: "wroclaw"
+    enabled: true
+    priority: "low"
+
+  - id: "uni_wroclaw_events"
+    name: "Uniwersytet Wrocławski"
+    type: "html"
+    url: "https://uwr.edu.pl/wydarzenia"
+    city: "wroclaw"
+    enabled: true
+    priority: "low"
+
+  - id: "startup_wroclaw_original"
+    name: "Startup Wrocław (Strona Główna)"
+    type: "html"
+    # To jest oryginalny link z PDF-a
+    url: "https://startupwroclaw.pl/aktualnosci/"
+    city: "wroclaw"
+    enabled: true
+    priority: "high"
