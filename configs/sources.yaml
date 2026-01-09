@@ -1,0 +1,7 @@
+sources:
+  - id: "example-rss"
+    name: "Przykładowy RSS"
+    type: "rss"
+    url: "https://example.com/feed.xml"
+    city: "wroclaw"
+    enabled: true
