@@ -1,19 +1,27 @@
-sources: 
+sources:
   - id: "crossweb_wroclaw"
     name: "Crossweb (Wrocław)"
     type: "html"
     url: "https://crossweb.pl/wydarzenia/wroclaw/"
     city: "wroclaw"
-    enabled: true
+    enabled: false
     priority: "very_high"
-    
+    selectors:
+      container: ".colTab.title" 
+      title: "self"
+      url: "parent"
+
   - id: "meetup_wroclaw_tech"
     name: "Meetup.com (Tech & Startup)"
     type: "html"
     url: "https://www.meetup.com/find/?location=pl--Wroclaw&source=EVENTS&keywords=technology"
     city: "wroclaw"
-    enabled: true
+    enabled: false
     priority: "very_high"
+    selectors:
+      container: "ul li"
+      title: "h3"
+      url: "a"
 
   - id: "evenea_biznes"
     name: "Evenea (Biznes & Startup)"
@@ -22,60 +30,79 @@ sources:
     city: "wroclaw"
     enabled: true
     priority: "high"
+    selectors:
+      container: ".event-card-container" 
+      title: ".event-card-title"
+      url: ".event-card-title"
 
-  - id: "concordia_design"
-    name: "Concordia Design Wrocław"
+  - id: "concordia_design_calendar"
+    name: "Concordia Design (Kalendarz)"
     type: "html"
     url: "https://www.concordiadesign.pl/kalendarz/?product_city=wroclaw"
     city: "wroclaw"
-    enabled: true
+    enabled: false
     priority: "medium"
+    selectors:
+      container: ".workshop"
+      title: ".workshop__title"
+      url: "self"
 
   - id: "concordia_design_blog"
-    name: "Concordia Design Wrocław"
+    name: "Concordia Design (Blog)"
     type: "html"
     url: "https://www.concordiadesign.pl/blog/"
     city: "wroclaw"
     enabled: true
     priority: "medium"
+    selectors:
+      container: ".workshop"
+      title: ".workshop__title"
+      url: "self"
 
-  - id: "women_in_tech_wroclaw"
-    name: "Women in Tech Wrocław"
+  - id: "startup_wroclaw_news"
+    name: "Startup Wrocław (Aktualności)"
+    type: "html"
+    url: "https://startupwroclaw.pl/aktualnosci/"
+    city: "wroclaw"
+    enabled: true
+    priority: "high"
+    selectors:
+      container: ".m-content-box-2"
+      title: ".m-content-box-2__title"
+      url: "a"
+
+  - id: "women_in_tech"
+    name: "Women in Tech"
     type: "html"
     url: "https://www.womentech.net/women-in-tech-events"
     city: "wroclaw"
     enabled: true
     priority: "medium"
+    selectors:
+      container: ".card"
+      title: ".company-card--title"
+      url: ".card-href"
 
-  - id: "wolves_summit"
-    name: "Wolves Summit"
-    type: "html"
-    url: "https://wolvessummit.com"
-    city: "wroclaw"
-    enabled: true
-    priority: "very_high"
-
-  - id: "pwr_calendar"
+  - id: "pwr_events"
     name: "Politechnika Wrocławska"
     type: "html"
     url: "https://pwr.edu.pl/uczelnia/przed-nami"
     city: "wroclaw"
-    enabled: true
+    enabled: false
     priority: "low"
+    selectors:
+      container: ".fc-evnt"
+      title: ".fc-event-title"
+      url: "a"
 
-  - id: "uni_wroclaw_events"
+  - id: "uni_wroc"
     name: "Uniwersytet Wrocławski"
     type: "html"
     url: "https://uwr.edu.pl/wydarzenia"
     city: "wroclaw"
     enabled: true
     priority: "low"
-
-  - id: "startup_wroclaw_original"
-    name: "Startup Wrocław (Strona Główna)"
-    type: "html"
-    # To jest oryginalny link z PDF-a
-    url: "https://startupwroclaw.pl/aktualnosci/"
-    city: "wroclaw"
-    enabled: true
-    priority: "high"
+    selectors:
+      container: ".element-wydarzenia"
+      title: ".element-wydarzenia-wrap-title"
+      url: "a"

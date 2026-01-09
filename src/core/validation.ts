@@ -10,7 +10,12 @@ export const SourceSchema = z.object({
 
   priority: z.enum(["low", "medium", "high", "very_high"]).default("medium"),
 
-  selectors: z.record(z.string()).optional(),
+  selectors: z.object({
+    container: z.string(),
+    title: z.string(),
+    url: z.string(),
+    date: z.string().optional(),
+  }).optional(),
 });
 
 export const ConfigSchema = z.object({
