@@ -4,4 +4,7 @@ export interface RawEvent {
   dateStr?: string;
   description?: string;
   sourceId: string;
+
+  date?: Date;
+  hash?: string;
 }

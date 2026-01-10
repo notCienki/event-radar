@@ -15,8 +15,9 @@ model Event {
   date        DateTime?
   city        String   @default("wroclaw")
   sourceId    String
+
+  contentHash String   @unique 
   
-  // Pola systemowe
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
